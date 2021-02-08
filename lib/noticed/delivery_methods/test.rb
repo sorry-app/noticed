@@ -4,6 +4,9 @@ module Noticed
       class_attribute :delivered, default: []
       class_attribute :callbacks, default: []
 
+      self.delivered = []
+      self.callbacks = []
+
       after_deliver do
         self.class.callbacks << :after
       end

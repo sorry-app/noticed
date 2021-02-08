@@ -6,6 +6,8 @@ module Noticed
 
       class_attribute :option_names, instance_writer: false, default: []
 
+      self.option_names = []
+
       attr_reader :notification, :options, :params, :recipient, :record
 
       class << self
